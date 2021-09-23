@@ -1,12 +1,21 @@
 ﻿using System;
 
-namespace Lab1
+namespace Lab1.Geometry2D
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Point p = new Point();
+
+            p.SetCoords(2, 2);
+            p.SetCoords(null, 2);
+
+            Vector v = new Vector();
+            v.Set(-1, 1);
+
+            Rectangle r = new Rectangle(2,3);
+            r.calculate(2, 3);
         }
     }
 }
