@@ -76,11 +76,11 @@ namespace Lab1
             {
                 Length = length;
                 Width = width;
-                calculate(length,width);
+                Area_of_rectangle(length,width);
             }
 
             // Rectangle class method
-            public void calculate(double length, double width)
+            public void Area_of_rectangle(double length, double width)
             {
                 double Area = (length * width);
                 Console.WriteLine(Area);

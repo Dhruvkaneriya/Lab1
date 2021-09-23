@@ -15,7 +15,7 @@ namespace Lab1.Geometry2D
             v.Set(-1, 1);
 
             Rectangle r = new Rectangle(2,3);
-            r.calculate(2, 3);
+            r.Area_of_rectangle(2, 3);
         }
     }
 }
