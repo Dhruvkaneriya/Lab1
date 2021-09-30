@@ -51,14 +51,16 @@ namespace Lab1
             public void Set(double dx, double dy)
             {
                 // if else condition check vector argument between [-1,1]
-                if (dx <= -1 && dy >= 1 || dx >= 1 && dy <= -1)
+                bool InRange(double x) => x <= 1 && x >= -1;
+
+                if (InRange(dx) && InRange(dy))
                 {
                     DX = dx;
                     DY = dy;
                 }
                 else
                 {
-                    Console.WriteLine("Invalid argument because vector value is out of [-1,1]");
+                    throw new ArgumentOutOfRangeException("Direction components must be in the range [-1, 1]");
                 }
             }
 
@@ -76,14 +78,7 @@ namespace Lab1
             {
                 Length = length;
                 Width = width;
-                Area_of_rectangle(length,width);
-            }
-
-            // Rectangle class method
-            public void Area_of_rectangle(double length, double width)
-            {
-                double Area = (length * width);
-                Console.WriteLine(Area);
+                Area = Length * Width;
             }
         }
     }
